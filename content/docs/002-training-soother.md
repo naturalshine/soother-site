@@ -1,5 +1,5 @@
 ---
-title: Speech Synthesis: Training and Inference
+title: Speech Synthesis - Training and Inference
 date: "2021-04-01"
 draft: false
 weight: 2
