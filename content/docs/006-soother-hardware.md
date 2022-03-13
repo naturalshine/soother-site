@@ -6,7 +6,7 @@ weight: 6
 ---
 
 # Training and Inference Hardware
-*n.b. this post might seem completely inane but I couldn't find information about AWS machine specs for tacotron-derived voice training **anywhere** so I'm writing it in the hope it helps someone in the future.*
+*n.b. this post might seem completely inane but I couldn't find information about AWS machine specs for tacotron-derived voice training **anywhere** so I'm writing it in the hope that it helps someone in the future.*
 
 To train SOOTHER on AWS, I used the following machines: 
 - p3.2xlarge
