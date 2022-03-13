@@ -68,7 +68,7 @@ weight = 6
   # Home page settings
   description = "SOOTHER is the prototype of an AI ASMR voice companion created in 2021 by [Claire Tolan](https://cst.yt/)."
 
-  moardescription = "This website hosts comprehensive documentation of SOOTHER. [Concept](/concept) explains the fundamentals of SOOTHER's personality and ASMR. Technical documentation of SOOTHER is collected in [docs](/docs). Screen grabs and videos of [SOOTHER's prototype](/prototype) show the project's state at the end of the S+T+ARTS residency in June 2021, and [voice](/voice) contains information about SOOTHER's speech dataset and samples from training and inference. Finally, [Next-Gen](/next-gen) speculates about the possible futures of the project, and [About](/about) details practial information and credits."
+  moardescription = "This website hosts comprehensive documentation of SOOTHER. [Concept](/concept) explains the fundamentals of SOOTHER's personality and ASMR. Technical documentation of SOOTHER is collected in [docs](/docs). Screen grabs and videos of [SOOTHER's prototype](/prototype) show the project's state at the end of the S+T+ARTS residency in June 2021, and [voice](/voice) contains information about SOOTHER's speech dataset and samples from training and inference. Finally, [Next-Gen](/next-gen) speculates about the possible futures of the project, and [About](/about) details practical information and credits."
   showAllPostsOnHomePage = true # default
   postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
