@@ -1,0 +1,124 @@
+@font-face{
+  font-family: 'cstlight';
+  src:  url('font/cst_light.woff2') format('woff2'),
+        url('font/cst_light.woff') format('woff'),
+        url('font/cst_ligt.otf') format('otf');
+}
+
+@font-face{
+  font-family: 'cstbold';
+  src:  url('font/cst_bold_clean.woff2') format('woff2'),
+        url('font/cst_bold_clean.woff') format('woff'),
+        url('font/cst_bold_clean.otf') format('otf');
+}
+
+:root{
+	--gradient: linear-gradient(
+		20deg, 
+		#d3a756,
+		#a08a2a,
+		#72b956,
+		#acc954,
+		#cfb145
+	);
+}
+
+::selection {
+  background: #acc954; /* WebKit/Blink Browsers */
+  color: #578d63;
+}
+::-moz-selection {
+  background: #acc954; /* Gecko Browsers */
+  color: #578d63;
+
+}
+
+.content{
+	font-family: 'Open Sans', sans-serif;
+}
+
+html{
+	border-top: none;
+}
+
+body{
+	background-color: rgba(233,205,179,0.5);
+}
+#header h1, #hearder a h1, #archive .post-list .post-item .meta, .post-list .post-item .meta, .content .h1, .content h1, .content.index a, #footer li a, .content .h1 a, #header #nav ul li, #header #nav ul li a{
+	font-family: cstbold, arial;
+	text-transform: uppercase;
+	background-image: var(--gradient);
+	background-clip: text;
+	color: transparent;
+	background-size: 400%;
+	animation: bg-animation 15s ease;
+	animation-iteration-count: infinite;
+}
+
+h2 {
+	font-family: cstbold, arial;
+	font-size: 1.4rem;
+  	color: #578d63;
+  	text-transform: uppercase;
+}
+
+h2::before{
+	display: none;
+}
+
+#header #nav ul li{
+	border: none;
+}
+
+#header h1{
+	line-height:3rem;
+}
+
+
+article h1{
+	font-size: 1.6rem;
+}
+
+#header #logo{
+	filter: none;
+	-webkit-filter: none;
+}
+
+
+.content .h1 a:hover, #footer a:hover, #header #nav ul li a:hover, .content.index a:hover{
+	text-decoration: none;
+	color: #acc954;
+	border-bottom: none;
+	background-image: none;
+}
+
+.content p{
+	text-align: left;
+}
+
+article.prototype .content img{
+	max-width: 400px;
+	width: 400px;
+}
+
+#footer a{
+	text-decoration: none;
+}
+
+#footer li{
+	border: none;
+}
+
+@keyframes bg-animation{
+	0%{
+		background-position: left;
+	}
+
+	50%{
+		background-position: right;
+	}
+
+	100%{
+		background-position: left;
+	}
+}

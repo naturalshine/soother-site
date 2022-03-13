@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <section id="about">
+  {{ if isset .Site.Params "description" }}
+    <p>{{ .Site.Params.description | $.Page.RenderString }}</p>
+  {{ end }}
+  {{ if isset .Site.Params "moardescription" }}
+    <p>{{ .Site.Params.moardescription | $.Page.RenderString }}</p>
+  {{ end }}
+  </section>
+
+  <section id="writing">
+    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Writings" }}</a></span>
+    
+    {{ $showAllPostsOnHomePage := false }}
+    {{ if (isset .Site.Params "showallpostsonhomepage") }}
+      {{ $showAllPostsOnHomePage = .Site.Params.ShowAllPostsOnHomePage }}
+    {{ end }}
+    {{ $mainPosts := (sort ( where site.RegularPages "Type" "in" site.Params.mainSection ) "Weight" "asc") }}
+    {{ if $showAllPostsOnHomePage }}
+    <ul class="post-list">
+      {{ range (.Paginate $mainPosts).Pages }}
+        <li class="post-item">
+          <div class="meta">{{ .Weight }}</div>
+          <span><a href="{{ .Permalink }}">{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</a></span>
+        </li>
+      {{ end }}
+    </ul>
+
+
+    {{ end }}
+  </section>
+
+{{ end }}
