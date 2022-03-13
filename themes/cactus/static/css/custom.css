@@ -21,6 +21,17 @@
 		#acc954,
 		#cfb145
 	);
+
+	--bggradient: linear-gradient(
+		20deg,
+		#fff,
+		#fafafa,
+		#fcfcfc,
+		#fbfbfb,
+		#fcfcfc,
+		#fafafa,
+		#fff
+	);
 }
 
 ::selection {
@@ -42,8 +53,12 @@ html{
 }
 
 body{
-	background-color: rgba(233,205,179,0.5);
+	background-image: var(--bggradient);
+	background-size: 400%;
+	animation: bg-animation 25s ease;
+	animation-iteration-count: infinite;
 }
+
 #header h1, #hearder a h1, #archive .post-list .post-item .meta, .post-list .post-item .meta, .content .h1, .content h1, .content.index a, #footer li a, .content .h1 a, #header #nav ul li, #header #nav ul li a{
 	font-family: cstbold, arial;
 	text-transform: uppercase;
