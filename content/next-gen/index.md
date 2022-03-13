@@ -50,5 +50,5 @@ If you have recommendations for other speech synthesis systems, I would be very 
 Hopefully with a sanitized data set and a more contemporary synthesis system, SOOTHER will speak with SOOTHER's perfect whisper. 
 
 # PARA-SOOTHER PROJECTS
-Building SOOTHER gave me a lot of Big Ideas about whispers, language, poetry, and artificial intelligence. I've started to plan a series of essays (?) or something like them (?) to accompany the project, and I will post updates about them here. Stay tuned! 
+Building SOOTHER gave me a lot of Big Ideas about whispers, language, poetry, and artificial intelligence. I've started to plan a series of essays (?) or something (?) to accompany the project, and I will post updates about this here. Stay tuned! 
 
