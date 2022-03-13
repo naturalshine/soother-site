@@ -20,7 +20,7 @@ The p3.8xlarge is significantly more expensive, clocking $15.92/hr versus the $3
 
 ![steps](/images/soother_training_steps.png)
 
-Any way, I ended up doing the vast majority of my training on the p3.2xlarge, running an instance for a total of 370 hours. This enabled me to train a model to ~250,000 steps two times, which I needed to do due to a delay in noticing an [existential error in my initial training setup](/docs/002-training-soother). 
+Any way, I ended up doing the vast majority of my training on the p3.2xlarge, running an instance for a total of 370 hours. This enabled me to train different models for a total of about 450,000 steps. 
 
-Because [inference was still failing](/docs/002-training-soother#inference) on the second round of training, I did not set up another machine to handle running inference on the model in response to requests from the prototype app. Because of accumulated costs of running a p3.2xlarge are not insignificant, I considered trying something like [elastic inference or elastic GPUs](https://towardsdatascience.com/a-complete-guide-to-ai-accelerators-for-deep-learning-inference-gpus-aws-inferentia-and-amazon-7a5d6804ef1c) to handle inference requests in testing and beta. I will continue to investigate how to optimise hardware in the next phases of the project. 
+Because [inference was still failing](/docs/002-training-soother#inference) in the second round of training, I did not fully implement a Text-to-Speech server to query the model. However, were I do this in the future, I would consider trying something like [elastic inference or elastic GPUs](https://towardsdatascience.com/a-complete-guide-to-ai-accelerators-for-deep-learning-inference-gpus-aws-inferentia-and-amazon-7a5d6804ef1c) to handle inference requests in testing and beta. This seems like it would probably be more affordable than constantly running a p3.2xlarge server, the costs of which are non-trivial. 
 
