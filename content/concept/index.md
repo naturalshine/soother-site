@@ -39,7 +39,7 @@ After a lot of thought, I settled on three personas for SOOTHER's prototype:
 - A tentacular alien sitting on your head
 - Your best friend who is unstuck in time
 
-The therapist-dog persona was introduced because I wanted SOOTHER to play [ELIZA](https://web.njit.edu/~ronkowit/eliza.html), an early chatbot programmed to act a Rogerian psychotherapist. I implemented a simple form of Eliza's quips and questions for this persona. The "dog" element just seemed funny to me -- after all, no one on the internet knows you are a dog. Personally, I would love to have a dog therapist to see how transference works with a non-human entity.
+The therapist-dog persona was introduced because I wanted SOOTHER to play [ELIZA](https://web.njit.edu/~ronkowit/eliza.html), an early chatbot programmed to act a Rogerian psychotherapist. I implemented a simple form of Eliza's quips and questions for this persona. The "dog" element just seemed funny to me -- after all, no one on the internet knows you are one. A dog. Personally, I would love to have a dog therapist to see how transference works with a non-human entity.
 
 The alien persona guides the listener through a meditation session, either in a birch wood or on the alien's home planet, all while perched on the listener's head and feeding on the listener's tingles. 
 
