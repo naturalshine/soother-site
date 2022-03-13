@@ -50,7 +50,7 @@ Yikes! Without a model showing alignment in training, "inference" would never wo
 
 ## Issue 2: Data Malformation
 
-I also realised too late that Mimic2 provided me with a handy little tool for analysing my data. [Here](https://github.com/MycroftAI/mimic2#visualizing-your-data) are some examples demonstrating training data analysis. My data looked like the "bad" examples on this page, only worse. I tried some easy fixes, which chiefly included removing all files that were on the longer end, which is where the data was most chaotic. After that, I was left with analysis results that looked like this: 
+I also realised too late that Mimic2 provided me with a handy little tool for analysing my data before starting to train. [Here](https://github.com/MycroftAI/mimic2#visualizing-your-data) are some examples demonstrating speech dataset analysis. It turned out that my data looked like the "bad" examples on this page, only worse. I tried some easy fixes, which chiefly included removing all files that were on the longer end, where the data was most chaotic. After that, I was left with analysis results that looked like this: 
 
 Character Length vs Average Seconds:
 ![char len vs avg secs](/images/char_len_vs_avg_secs.png)
@@ -67,7 +67,7 @@ Character Length vs Number of Samples:
 Character Length vs Standard Deviation:
 ![char len vs std dev](/images/char_len_vs_std.png)
 
-Phoneme Distribution (this is not a problematic outcome; it's merely interesting):
+Phoneme Distribution (this, at least, does not represent a problematic result; it's merely interesting):
 ![phoneme dist](/images/phoneme_dist.png)
 
 I removed the obvious outliers in these graphs, but the data still wasn't great. However, I was running out of time. As I discuss in [my future plans](/next-gen), I will have to make a sweep through all of my training data to clean it up further since my [quality control process](/docs/001-technical-management-soother-sound#remaining-issues-with-data-quality) seems to have failed some non-trivial percentage of the time. 
