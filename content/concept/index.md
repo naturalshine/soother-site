@@ -57,4 +57,4 @@ For more information about the personas, see particularly the sections on [conve
 
 "For I indeed once saw with my own eyes the Sibyl at Cumae hanging in her jar, and when the boys asked her: 'Sibyl, what do you want?', she answered: 'I want to die'." 
 
-This the epigraph of ["The Wasteland"](https://poets.org/poem/waste-land). Incidentally, the Sibyl's wish is the same as that of the monster after exacting his revenge in [*Frankenstein*](/voice/001-speech-dataset).
+This the epigraph of ["The Wasteland"](https://poets.org/poem/waste-land). Incidentally, the Sibyl's wish is the same as that of the monster, once it has exacted its revenge on poor [M. Frankenstein](/voice/001-speech-dataset). It hitches an ice floe to the north pole, where it plans to build itself a funeral pyre. With what wood, I do not know. 
