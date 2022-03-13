@@ -3,7 +3,10 @@ title: Concept
 date: "2021-04-01"
 draft: false
 ---
-# SOOTHER was conceived as the culmination of a fork of my [ongoing work with ASMR](https://cst.yt/training/projects/asmr).
+
+# ASMR
+
+SOOTHER was conceived as the culmination of a fork of my [ongoing work with ASMR](https://cst.yt/training/projects/asmr).
 
 ASMR, Autonomous Sensory Meridian Response, describes a tingling sensation in the scalp and spine, a physiological response to soft sounds such as whispering and nail-tapping. Since the early 2010s, ASMR performers, known as ASMRtists, have posted millions of “tingle”-triggering videos to YouTube. Over time, the videos have come to serve a secondary purpose as viewers tune in for an escape from the frenetic everyday, for anxiety- and insomnia-relief. My work with ASMR has been concerned, in part, with the therapeutic applications of ASMR and their attendant effects and implications: the politics of what it means to provide care for strangers in the 21st century, the memory-triggering soothing of the soft sounds, and the phenomenology and poetics of whispered speech. Since 2013, I have worked with ASMR in many different contexts (radio, recording, exhibition, game development, and performance), experimenting with the phenomenon outside of its typical deployment on YouTube. 
 
