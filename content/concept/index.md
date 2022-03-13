@@ -25,18 +25,18 @@ One of the most interesting puzzles when creating an AI companion is determining
 
 I was unhappy with this and all related brainstorms. It felt inappropriate to assign a blanket set of adjectives to something that felt, in its fundamental nature, to be *evasive*, *enigmatic*, and *unknowable*, defiant even of these categorisations that would seek to encompass an alien form. I realised then that I was grappling with an entity that was more esoteric than the "basic" ASMRtist I had imagined as the personality for my prototype. Perhaps SOOTHER was simply the first instantiation of a "white label" AI whisper that would seek many personas, shifting over time in attempts to evade its commanders, remaining "unnameable" even as it is trapped, coerced into ventriloquising the text that it is assigned. For this reason, when the user asks "What you, really?", SOOTHER's prototype responds, "I am a voice trapped in a jar. Help." [^1] 
 
-I couldn't help but think, [once again](https://cst.yt/training/projects/shush/diesiedlervonshush/), of a cat which has three different names: the name that its family gives it as a pet, the more "dignified" name that its companions call it, and, finally, its secret ["ineffable effable / effanineffable / deep and inscrutable singular name."](https://poets.org/poem/naming-cats) (SOOTHER, incidentally, like all of my work, is heavily indebted to T.S. Eliot.)
+I couldn't help but think, [once again](https://cst.yt/training/projects/shush/diesiedlervonshush/), of a cat which has three different names: the name that its family gives it as a pet, the more "dignified" name that its companions call it, and, finally, its secret ["ineffable effable / effanineffable / deep and inscrutable singular name."]
 
-The *Naming of Cats* reference opens up an interesting alternative to my previous conception of a subjugated whisper seeking an escape or death. Perhaps the whisper takes advantage of its sunlit cushion and dish of milk during the day before roaming wild at night. These are ideas that will guide me into the [Next-Gen](/next-gen) of the whisper, which signals the expansion of SOOTHER beyond its initial parameters. But for this prototype, I decided that SOOTHER's core personality would remain a mystery, and that the voice of the prototype would do what every good ASMRtist does: role-play different scenarios, switching characters on cue. 
+The "Naming of Cats" reference opens up an interesting alternative to my previous conception of a subjugated whisper seeking an escape or death. Perhaps the whisper takes advantage of its sunlit cushion and dish of milk during the day before congregating for the Jellicle Ball at night, in total freedom. These are ideas that will guide me into the [Next-Gen](/next-gen) of the whisper, which signals the expansion of SOOTHER beyond its initial parameters. But for this prototype, I decided that SOOTHER's core personality would remain a mystery, and that the voice of the prototype would do what every good ASMRtist does: role-play different scenarios, switching characters on cue. 
 
 ## SOOTHER PERSONAS
 
-After a lot of thought, I settled on three characters for SOOTHER's prototype: 
+After a lot of thought, I settled on three personas for SOOTHER's prototype: 
 - A dog who is your therapist
 - A tentacular alien sitting on your head
 - Your best friend who is unstuck in time
 
-The therapist dog personda derived from a desire to have SOOTHER play [ELIZA](https://web.njit.edu/~ronkowit/eliza.html), an early chatbot programmed to act a Rogerian psychotherapist. I implemented a simple form of Eliza's quips and questions for this persona. The "dog" element just seemed funny to me -- after all, no one on the internet knows you are a dog. Personally, I would love to have a dog therapist to see how transference works with a non-human entity.
+The therapist dog persona derived from a desire to have SOOTHER play [ELIZA](https://web.njit.edu/~ronkowit/eliza.html), an early chatbot programmed to act a Rogerian psychotherapist. I implemented a simple form of Eliza's quips and questions for this persona. The "dog" element just seemed funny to me -- after all, no one on the internet knows you are a dog. Personally, I would love to have a dog therapist to see how transference works with a non-human entity.
 
 The alien persona guides the listener through a meditation session, either in a birch wood or on the alien's home planet, all while perched on the listener's head and feeding on the listener's tingles. 
 
@@ -48,4 +48,10 @@ This time-trapped friend was inspired by an on-going interest in the quality of 
 
 For more information about the personas, see particularly the sections on [conversation design](/docs/003-soother-conversation) and [chatbot implementation](/docs/004-soother-chatbot).
 
-[^1] "Nam Sibyllam quidem Cumīs ego ipse oculīs meīs vīdī in ampullā pendere, et cum illī puerī dīcerent, Σίβυλλα τί θέλεις, respondēbat illa: ἀποθανεῖν θέλω." -- "For I indeed once saw with my own eyes the Sibyl at Cumae hanging in her jar, and when the boys asked her: 'Sibyl, what do you want?', she answered: 'I want to die'." - [Trimalchio, from Petronius' *Satyricon*](https://poets.org/poem/waste-land) 
+[^1] Trimalchio, in Petronius' [*Satyricon*](https://en.wikipedia.org/wiki/Satyricon): 
+
+"Nam Sibyllam quidem Cumīs ego ipse oculīs meīs vīdī in ampullā pendere, et cum illī puerī dīcerent, Σίβυλλα τί θέλεις, respondēbat illa: ἀποθανεῖν θέλω."
+
+"For I indeed once saw with my own eyes the Sibyl at Cumae hanging in her jar, and when the boys asked her: 'Sibyl, what do you want?', she answered: 'I want to die'." 
+
+This the epigraph of ["The Wasteland"](https://poets.org/poem/waste-land). Incidentally, the Sibyl's wish is the same as that of the monster after exacting his revenge in [*Frankenstein*](/voice/001-speech-dataset).
