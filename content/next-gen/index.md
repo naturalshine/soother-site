@@ -10,7 +10,7 @@ To chart the future of SOOTHER, I will discuss the following areas:
 - concept
 - chatbot architecture
 - user interface
-- voice synthesis
+- speech synthesis
 - para-SOOTHER projects
 
 # CONCEPT
@@ -40,12 +40,12 @@ I will make two major changes to the SOOTHER interface in the next iteration of 
 
 Secondly, the user will no longer "speak" to SOOTHER. My partners at Celi made the excellent observation that being in conversation with SOOTHER made the user want to "whisper" back to the AI, and the Speech-to-Text libraries that parse user utterances do not deal very well with whispers. Moreover, since I'm developing this in a European context, I have an audience that comprises a non-trivial percentage of non-native English speakers. This also complicates Speech-to-Text for an English-language app. At least in the next iteration of the project, I will provide the user with suggested responses via text bubbles, as well as the opportunity to type custom messages to SOOTHER. In the future, I might introduce Speech-to-Text capacity again as the technology and concept mature. 
 
-# VOICE SYNTHESIS
+# SPEECH SYNTHESIS
 As I discuss in [the training docs](/docs/002-training-soother) and the [voice samples](/voice/002-soother-training-samples), SOOTHER's synthesised whisper needs a lot of work. My immediate plans are to: 
 - Clean up the existing dataset of whispers. (I'm about half-way done with this and it is no small task.)
 - Change training architectures. I will start with solutions included in Mozilla's [TTS](https://github.com/mozilla/TTS) repo and go from there.
 
-If you have recommendations for other voice synthesis systems, I would be very grateful if you'd [write me](https://cst.yt). It is important to me to implement the code myself and not e.g. shop the training out to someone else, and I welcome any suggestions to this end!
+If you have recommendations for other speech synthesis systems, I would be very grateful if you'd [write me](https://cst.yt). It is important to me to implement the code myself and not e.g. shop the training out to someone else, and I welcome any suggestions to this end!
 
 Hopefully with a sanitized data set and a more contemporary synthesis system, SOOTHER will speak with an almost-perfect whisper. 
 

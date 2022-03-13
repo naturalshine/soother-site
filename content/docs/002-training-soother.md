@@ -1,17 +1,15 @@
 ---
-title: Training SOOTHER's Synthesised Whisper
+title: Speech Synthesis: Training and Inference
 date: "2021-04-01"
 draft: false
 weight: 2
 ---
  
-# TRAINING SOOTHER 
-
-## Training setup and plan
+# Speech Synthesis: Training and Inference
  
 When I had finished [cleaning the sound files](/doc/001-technical-management-soother-sound), I was ready to train the voice model.
 
-I had started working on SOOTHER under the assumption that I would modify the [MycroftAI](https://mycroft.ai/) system in order to serve my purposes. This assumption was based upon a limited survey of the field, and the observation that [Macsen](http://techiaith.cymru/packages/macsen/?lang=en), which I planned to fork, was based on Mycroft Intent Parsers. MycroftAI is an open-source smart voice assistant, which is largely devised for smart speakers and other such devices, making it an awkward fit for my use-case. However, it is a modularly-designed system, and as such, you can pick and choose what components you use. Mycroft provides voice synthesis system via a library called [Mimic2](https://github.com/MycroftAI/mimic2). Mimic2 is a fork of [Keith Ito's](https://github.com/keithito/tacotron) implementation of [Google's Tacotron paper](https://google.github.io/tacotron/), which described a system for end-to-end voice synthesis.[^1]
+I had started working on SOOTHER under the assumption that I would modify the [MycroftAI](https://mycroft.ai/) system in order to serve my purposes. This assumption was based upon a limited survey of the field, and the observation that [Macsen](http://techiaith.cymru/packages/macsen/?lang=en), which I planned to fork, was based on Mycroft Intent Parsers. MycroftAI is an open-source smart voice assistant, which is largely devised for smart speakers and other such devices, making it an awkward fit for my use-case. However, it is a modularly-designed system, and as such, you can pick and choose what components you use. Mycroft provides speech synthesis system via a library called [Mimic2](https://github.com/MycroftAI/mimic2). Mimic2 is a fork of [Keith Ito's](https://github.com/keithito/tacotron) implementation of [Google's Tacotron paper](https://google.github.io/tacotron/), which described a system for end-to-end speech synthesis.[^1]
 
 The Mimic2 fork, and Ito's tacotron repo, contain a codebase that does the following: 
 - Analyse data (to observe standard deviation, etc.)
@@ -92,7 +90,7 @@ Audio and more visuals from training are available [here](/voice/002-soother-tra
 
 Although inference "worked" with the model trained in this round, there were major problems with pacing, legibility, and timing. Due to the changes that I made in the inference audio parser (per the github issue linked above), inference doesn't know where to "stop", and all output files are the same length, ending either with a long silence or an echo. 
 
-Were I to train my voice again using this process, I would perhaps try [this slightly newer fork](https://github.com/begeekmyfriend/tacotron), which requires less training data and includes a "stop token" to solve the above problem. However, as I discuss in my [next steps](/next-gen) section, I will likely first try the different training methods (one of which includes a tacotron implementation) maintained by Mozilla in their [TTS](https://github.com/mozilla/TTS) repo. The tacotron implementations that I used for the prototype are aging appreciably, and requirements management is becoming a bit of a nightmare. Meanwhile, voice synthesis systems are rapidly improving, and it seems foolish to stick with training methods developed more than five years ago given the many newer innovations. 
+Were I to train my voice again using this process, I would perhaps try [this slightly newer fork](https://github.com/begeekmyfriend/tacotron), which requires less training data and includes a "stop token" to solve the above problem. However, as I discuss in my [next steps](/next-gen) section, I will likely first try the different training methods (one of which includes a tacotron implementation) maintained by Mozilla in their [TTS](https://github.com/mozilla/TTS) repo. The tacotron implementations that I used for the prototype are aging appreciably, and requirements management is becoming a bit of a nightmare. Meanwhile, speech synthesis systems are rapidly improving, and it seems foolish to stick with training methods developed more than five years ago given the many newer innovations. 
 
 
 --   

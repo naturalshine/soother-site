@@ -1,11 +1,11 @@
 ---
-title: SOOTHER Conversation Design
+title: Conversation Design
 date: "2021-04-01"
 draft: false
 weight: 3
 ---
 
-# SOOTHER Conversation Design 
+# Conversation Design 
 
 After finalising SOOTHER's [concept](/concept), I mapped out the basic conversational flows for SOOTHER's prototype in Figma. 
 

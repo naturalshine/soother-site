@@ -1,13 +1,11 @@
 ---
-title: SOOTHER Chatbot
+title: Chatbot API
 date: "2021-04-01"
 draft: false
 weight: 4
 ---
 
-# SOOTHER's CHATBOT
-
-## Macsen Chatbot and Context
+# Chatbot API
 
 To implement SOOTHER's chatbot, I forked [Macsen's Chatbot](https://github.com/techiaith/macsen-sgwrsfot). Macsen is an open-source [Welsh Langugage Voice Assistant](http://techiaith.cymru/packages/macsen/?lang=en) that comprises several APIs and a front-end Flutter app, which I forked for [SOOTHER's prototype app](/docs-005-soother-frontend-app).It was a fun challenge both to parse the code AND to translate everything from Welsh! 
 
@@ -17,7 +15,7 @@ Macsen's chatbot API is a collection of skills that perform simple question-and-
 
 The Macsen chatbot uses a non-contextual intent parser developed by [Mycroft AI](https://mycroft.ai/) called [Adapt](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/adapt). At this point, I knew very little about other chatbot frameworks, and because I was limited in time, I was determined to make Macsen's codebase work for me. I therefore introduced a second-level of intent-parsing using another Mycroft-developed intent parser, [padatious](https://mycroft-ai.gitbook.io/docs/mycroft-technologies/padatious), which allows for context retention. 
 
-## SOOTHER Chatbot Github
+## Chatbot API Github
 
 My chatbot API code is far from elegant and far from bugless -- it is a complete hack! It works about 80% of the time, and when it doesn't work, it goes into recursion or just freaks out. Instead of removing the layer of "adapt" intent parsing implemented in the initial Macsen chatbot, I have the user request hit adapt first (*unless* there's a context variable set, in which case it does something even MORE stupid) before shuttling the request to a padatious-controlled mechanism. It's dumb and brittle, though for a prototype, it worked well enough. However, one of my first priorities for the [next iteration of SOOTHER](/next-gen) is re-architecting the chatbot. 
 

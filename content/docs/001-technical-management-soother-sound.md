@@ -1,11 +1,11 @@
 ---
-title: Technical management of SOOTHER's sound archive
+title: Technical management of SOOTHER's speech dataset
 date: "2021-04-01"
 draft: false
 weight: 1
 ---
 
-# Technical Management of SOOTHER's sound archive
+# Technical Management of SOOTHER's speech dataset
 
 In recording the source material for SOOTHER's [voice](/voice), I found myself with 80+ hours of sound files. I recorded long files with deliberate pauses between each "line" of [SOOTHER's source spreadsheets](/voice#source).
 
