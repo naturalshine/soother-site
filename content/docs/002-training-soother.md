@@ -32,13 +32,13 @@ Then,
 
 ## Issues arise in Inference
 
-This process went smoothly up through the "train" step. I wrote a custom little pre-processer for my data, which was trivial based upon instructions and examples in the mimic2 repo. I successfully trained my voice to 1000 steps on my local machine's CPU, which took nearly a day, but which output something that was definitely sounding like a whisper. See the early example in [voice training samples](/voice/002-soother-training-samples).
+This process went smoothly up through the "train" step. I wrote a custom little pre-processer for my data, which was trivial based upon instructions and examples in the mimic2 repo. I successfully trained my voice to 1000 steps on my local machine's CPU, which took nearly a day. This early training output something that was definitely sounding like a whisper. See the early example in [voice training samples](/voice/002-soother-training-samples).
 
-I then deployed various AWS servers, rigged up my docker configurations, and started training with a [p3 AWS instance](/docs/006-soother-hardware). And the training worked! The voice was noticably improving at every checkpoint. I thought: this is easy! I let training run to 250,000 steps. Then, I decided to try to run inference on the model. During training, the model outputs audio samples derived from texts in its dataset. It already "knows" how they sound (this is called "guided" synthesis). In inference, you ask the model to speak something entirely new. And at 250,000 steps, when I asked my model to speak in inference, it catastrophically, as we say in the business, [no worky](/docs/002-soother-training-samples#inference-round-one).
+I then deployed various AWS servers, rigged up my docker configurations, and started training with a [p3 AWS instance](/docs/006-soother-hardware). And the training worked! The voice was noticably improving at every checkpoint. I thought: this is easy! I let training run to 250,000 steps. Then, I decided to try to run inference on the model. At training checkpoints, the model outputs audio samples derived from texts in its dataset. It already "knows" how they sound (this is called "guided" synthesis). In inference, you ask the model to speak something entirely new. And at 250,000 steps, when I asked my model to speak in inference, it catastrophically [no worky](/docs/002-soother-training-samples#inference-round-one), as we say in the business.
 
 ## Issue 1: Lack of Alignment
 
-Look, reader, I'd never trained an AI before, and I have a personal flaw, which is that I hate to read instructions. I'm a real fuck-around-and-figure-it-out kind of person when I would often benefit from a little good old-fashioned RTFM. So, it took me longer than it should have to realise that the spectrograms that my model output at checkpoints indicated that the model was never going to reach alignment. They looked like this:
+Look, reader, I'd never trained an AI before, and I have a personal flaw, which is that I hate to read instructions. I'm a real fuck-around-and-figure-it-out kind of person. So, it took me longer than it should have to realise that the spectrograms my model was outputting at checkpoints indicated that it was never going to reach alignment. They looked like this:
 
 ![NOT alignment](/images/step-245000-align.png)
 
