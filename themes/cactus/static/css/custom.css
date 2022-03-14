@@ -138,3 +138,11 @@ article.prototype .content img{
 		background-position: left;
 	}
 }
+
+@media only screen and (max-width: 550px) {
+	article.prototype .content img{
+		max-width: 100%;
+		width: 100%;
+	}
+
+}

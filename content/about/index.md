@@ -20,6 +20,6 @@ SOOTHER was created by Claire Tolan in 2021 during a S+T+ARTS CITY OF THE FUTURE
 
 ![SOOTHER training monitoring](/images/soother01.png)
 
-[Claire Tolan](https://cst.yt) is an artist. She conceptualised the project; recorded the voice of SOOTHER; edited the sound; trained SOOTHER's first speech model; wrote SOOTHER's prototypical role-plays; and programmed the initial SOOTHER APIs and app.
+[Claire Tolan](https://cst.yt) is an artist. She conceptualised the project; recorded the voice of SOOTHER; edited the sound; trained SOOTHER's speech models; wrote SOOTHER's prototypical role-plays; and programmed the SOOTHER APIs and app.
 
 The hand-writing font used throughout the website and in SOOTHER's prototype was created by [Milena Georgieva](https://milenageorgieva.xyz/) from samples of Claire Tolan's handwriting. The handwriting font and color palate were initially designed by Milena Georgieva for [CICADA GAMES](https://cst.yt/training/projects/cicada-games/), an augmented ASMR audio play, also created by Claire Tolan in 2021 and produced by [Czirp Czirp](https://czirpczirp.cc). 

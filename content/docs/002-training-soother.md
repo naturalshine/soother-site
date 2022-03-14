@@ -7,7 +7,7 @@ weight: 2
  
 # Speech Synthesis: Training and Inference
  
-When I had finished [cleaning the sound files](/doc/001-technical-management-soother-sound), I was ready to train the voice model.
+When I had finished [cleaning the speech dataset](/doc/001-technical-management-soother-sound), I was ready to train the speech model.
 
 I had begun SOOTHER with the assumption that I would modify the [MycroftAI](https://mycroft.ai/) system in order to serve my purposes. This assumption was based upon a limited survey of the field, and the observation that [Macsen](http://techiaith.cymru/packages/macsen/?lang=en), which I planned to fork, was based on Mycroft Intent Parsers. MycroftAI is an open-source smart voice assistant, which is largely devised for smart speakers and other such devices, making it an awkward fit for my use-case. However, it is a modularly-designed system, and as such, you can pick and choose what components you use. Mycroft provides speech synthesis system via a library called [Mimic2](https://github.com/MycroftAI/mimic2). Mimic2 is a fork of [Keith Ito's](https://github.com/keithito/tacotron) implementation of [Google's Tacotron paper](https://google.github.io/tacotron/), which described a system for end-to-end speech synthesis.[^1]
 
