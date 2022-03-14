@@ -7,11 +7,11 @@ weight: 1
 
 # SOOTHER Synthesis
 
-Here are some examples of SOOTHER's synthesised whisper in training and inference. The "training" samples are output at "checkpoints" during model training and are derived from the speech dataset; the "inference" samples are created by querying a trained model with text that is not included in the speech dataset. As you can see below, the "training" samples are far more coherent due to the algorithm having contextual information about the text being output. 
+Here are some examples of SOOTHER's synthesised whisper in training and inference. The "training" samples are output at "checkpoints" during model training and are derived from the speech dataset; the "inference" samples are created by querying a trained model with text that is not included in the speech dataset. As you can see below, the "training" samples are far more coherent because the algorithm has contextual information about the text being output. 
 
 As [noted](/about), SOOTHER is trained imperfectly, and this failing is clear, in particular, in the "inference" samples. For more about training and inference, see the [general discussion](/docs/002-training-soother) on the subject. 
 
-I completed two major rounds of training on SOOTHER, one to ~250,000 steps, and another to ~140,000 steps, which was halted due to time; budget; and a creeping suspicion that my [data wasn't clean enough](/docs/001-technical-management-soother-sound#remaining-issues-with-data-quality) and should be sanitized further before continuing.
+I completed two major rounds of training on SOOTHER, one to ~250,000 steps, and another to ~140,000 steps, which was halted due to time; budget; and a creeping suspicion that my [data was malformed](/docs/001-technical-management-soother-sound#remaining-issues-with-data-quality) and should be sanitized further before continuing.
 
 # Training Round One
 
