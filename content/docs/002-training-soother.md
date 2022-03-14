@@ -9,12 +9,12 @@ weight: 2
  
 When I had finished [cleaning the sound files](/doc/001-technical-management-soother-sound), I was ready to train the voice model.
 
-I had started working on SOOTHER under the assumption that I would modify the [MycroftAI](https://mycroft.ai/) system in order to serve my purposes. This assumption was based upon a limited survey of the field, and the observation that [Macsen](http://techiaith.cymru/packages/macsen/?lang=en), which I planned to fork, was based on Mycroft Intent Parsers. MycroftAI is an open-source smart voice assistant, which is largely devised for smart speakers and other such devices, making it an awkward fit for my use-case. However, it is a modularly-designed system, and as such, you can pick and choose what components you use. Mycroft provides speech synthesis system via a library called [Mimic2](https://github.com/MycroftAI/mimic2). Mimic2 is a fork of [Keith Ito's](https://github.com/keithito/tacotron) implementation of [Google's Tacotron paper](https://google.github.io/tacotron/), which described a system for end-to-end speech synthesis.[^1]
+I had begun SOOTHER with the assumption that I would modify the [MycroftAI](https://mycroft.ai/) system in order to serve my purposes. This assumption was based upon a limited survey of the field, and the observation that [Macsen](http://techiaith.cymru/packages/macsen/?lang=en), which I planned to fork, was based on Mycroft Intent Parsers. MycroftAI is an open-source smart voice assistant, which is largely devised for smart speakers and other such devices, making it an awkward fit for my use-case. However, it is a modularly-designed system, and as such, you can pick and choose what components you use. Mycroft provides speech synthesis system via a library called [Mimic2](https://github.com/MycroftAI/mimic2). Mimic2 is a fork of [Keith Ito's](https://github.com/keithito/tacotron) implementation of [Google's Tacotron paper](https://google.github.io/tacotron/), which described a system for end-to-end speech synthesis.[^1]
 
 The Mimic2 fork, and Ito's tacotron repo, contain a codebase that does the following: 
 - Analyse data (to observe standard deviation, etc.)
 - Pre-process data (+ tips to build a custom pre-processor for your metadata csv & wav files)
-- Train model
+- Train speech model
 - Monitor training
 - Synthesize voice with a simple server that queries the model at a given checkpoint
 - And, provide docker files for GPU and CPU machines to run this entire process in docker
@@ -32,9 +32,9 @@ Then,
 
 ## Issues arise in Inference
 
-This process went smoothly up through the "train" step. I wrote a custom little pre-processer for my data, which was trivial based upon instructions and examples in the mimic2 repo. I successfully trained my voice to 1000 steps on my local machine's CPU, which took nearly a day. This early training output something that was definitely sounding like a whisper. See the early example in [voice training samples](/voice/002-soother-training-samples).
+This process went smoothly up through the "train" step. I wrote a custom little pre-processer for my data, which was trivial based upon instructions and examples in the mimic2 repo. I successfully trained a speech model to 1000 steps on my local machine's CPU, which took nearly a day. At 1000 steps, the model output audio that was definitely sounding like a whisper. See the early example in [speech model demos](/voice/002-soother-training-samples).
 
-I then deployed various AWS servers, rigged up my docker configurations, and started training with a [p3 AWS instance](/docs/006-soother-hardware). And the training worked! The voice was noticably improving at every checkpoint. I thought: this is easy! I let training run to 250,000 steps. Then, I decided to try to run inference on the model. At training checkpoints, the model outputs audio samples derived from texts in its dataset. It already "knows" how they sound (this is called "guided" synthesis). In inference, you ask the model to speak something entirely new. And at 250,000 steps, when I asked my model to speak in inference, it catastrophically [no worky](/docs/002-soother-training-samples#inference-round-one), as we say in the business.
+I then deployed various AWS servers, rigged up my docker configurations, and started training with a [p3 AWS instance](/docs/006-soother-hardware). And the training worked! The voice was noticably improving at every checkpoint. I thought: this is easy! I let training run to 250,000 steps. Then, I tried running inference on the speech model. At training checkpoints, the model outputs audio samples derived from texts in its dataset. It already "knows" how they sound (this is called "guided" synthesis). In inference, you ask the model to speak something entirely new. And at 250,000 steps, when I asked my model to speak in inference, it catastrophically [no worky](/docs/002-soother-training-samples#inference-round-one), as we say in the business.
 
 ## Issue 1: Lack of Alignment
 
@@ -70,11 +70,11 @@ Character Length vs Standard Deviation:
 Phoneme Distribution (this, at least, does not represent a problematic result; it's merely interesting):
 ![phoneme dist](/images/phoneme_dist.png)
 
-I removed the obvious outliers in these graphs, but the data still wasn't great. However, I was running out of time. As I discuss in [my future plans](/next-gen), I will have to make a sweep through all of my training data to clean it up further since my [quality control process](/docs/001-technical-management-soother-sound#remaining-issues-with-data-quality) seems to have failed some non-trivial percentage of the time. 
+I removed the obvious outliers in these graphs, but the data still wasn't great. However, I was running out of time. As I discuss in [my future plans](/next-gen), I will have to make a sweep of my entire speech dataset to clean it up further since my [quality control process](/docs/001-technical-management-soother-sound#remaining-issues-with-data-quality) seems to have failed some non-trivial percentage of the time. 
 
 ## Finding Alignment
 
-I needed to continue with the data that I had, and after reading many, many github issues, I realised that the issue with model alignment might be separate, at least in part, from the issues with data malformation. I read that Keith Ito's initial implementation of tacotron was more forgiving than the mimic2 fork. Thus, I decided to change speech synthesis repos. I also made some changes to the hparams of the training script, to the bitrate of my wav files, and to the [synthesis audio parser](https://github.com/keithito/tacotron/issues/92). These changes might have, in the end, made a bigger impact than the change of the synthesis repo. To be honest, I'm completely unsure what did the trick. I did send a tweet into the void with an offer to sell my soul in exchange for alignment, so it can't be discounted that someone took me up on that. Whatever the cause, in the next round of training, my model quickly reached something like alignment.
+Due to time constraints, I needed to make the speech dataset work without further intervention. After reading many, many github issues, I realised that the issue with speech model alignment might be separate, at least in part, from the issues with data malformation. I read that Keith Ito's initial implementation of tacotron was more forgiving than the mimic2 fork. Thus, I decided to change speech synthesis repos. I also made some changes to the hparams of the training script, to the bitrate of my wav files, and to the [synthesis audio parser](https://github.com/keithito/tacotron/issues/92). These changes might have, in the end, made a bigger impact than the change of the synthesis repo. To be honest, I'm completely unsure what did the trick. I did send a tweet into the void with an offer to sell my soul in exchange for alignment, so it can't be discounted that someone took me up on that. Whatever the cause, in the next round of training, my model quickly reached something like alignment.
 
 Here it is at 58,000 steps: 
 

@@ -47,12 +47,11 @@ Here is an early explanation of the SOOTHER skills that are included in these di
 	- I would fold all of these functions into a "help" skill. 
 	- Upon receiving a response that SOOTHER does not understand, the "HELP" skill should be triggered, with SOOTHER requesting the user clarify the response, either via voice or typing in the SOOTHER chat (bypasisng the STT API). 
 	- As a rule, SOOTHER should ask the user to clarify three times before either (a) picking a branch for the user or (b) directing the user to the main menu (depending on the particular skill)
-	- SOOTHER should also have a list of "prohibited words" to which it has a response about inappropriate language (this should be playful but also firm)
 	- I'm not completely sure how this should be structured and could definitely use feedback in terms of how to handle this skill 
 
 In the prototype of SOOTHER, all of these skills exist with the exception of the Help skill, which was integrated into each individual skill in the [chatbot implementation](/docs/004-soother-chatbot). 
 
-This initial sketch of the SOOTHER conversation flows was helpful for fleshing out the different angles of my concept, but ultimately, I ended up drafting the final prototype conversations in the chatbot code as I wrote it. The Figma interface is unwieldy for narrative composition, and, in the end, much of what I wrote depended on other contextual information included in the codebase itself.
+This initial sketch of the SOOTHER conversational flows was helpful for fleshing out the different angles of my concept, but ultimately, I ended up drafting the prototype conversations in the chatbot code as I wrote it. The Figma interface is unwieldy for narrative composition, and, in the end, much of what I wrote depended on other contextual information included in the codebase itself.
 
 I know from external chatbot research that the transition from design to implementation is a pain point throughout the entire chatbot industry. It seems even *more* difficult to transfer the flow of creative narrative design into a code-based structure than the flow of, for example, customer assistance conversations. I don't have any solution for this, but it's interesing to consider. What would be an optimal tool for composing "forking" narratives? And -- further -- how might they best be represented beyond a chatbot paradigm? I imagine this is also an interesitng subject of inquiry for those wanting to transfer, for example, the dialogue of a slack or discord chat into a publishable form. 
 
