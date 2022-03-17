@@ -54,7 +54,7 @@ SOOTHER's prototype has the following functionality:
 - Time-slipping friend
 2. Tell the user factual information about ASMR 
 
-3. Recommend ASMR videos to the user
+3. Recommend YouTube ASMR videos to the user
 
 4. Tell the user about itself (SOOTHER) and about its creator (Claire)
 
