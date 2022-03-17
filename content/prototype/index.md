@@ -27,7 +27,6 @@ Here is a demo of SOOTHER's prototype app using pre-recorded human voice samples
 
 {{< youtube wn4i7h_51oM >}}
 
-
 # SOOTHER synthesized whispers
 
 Here are some of the best synthesized whispers from training the SOOTHER model. More whispers and related discussion are available in [voice samples](/voice/002-soother-training-samples) and the [training docs](/docs/002-training-soother).
@@ -44,6 +43,20 @@ Here are some of the best synthesized whispers from training the SOOTHER model. 
 
 **140,000 steps**
 {{< audio src="/audio/step-140000-audio.wav" class="audio" >}}
+
+# Prototype Functionality
+
+SOOTHER's prototype has the following functionality:
+
+1. Role play three personas that guide the user through different narrative role-plays: 
+- Dog therapist
+- Meditating alien
+- Time-slipping friend
+2. Tell the user factual information about ASMR 
+
+3. Recommend ASMR videos to the user
+
+4. Tell the user about itself (SOOTHER) and about its creator (Claire)
 
 
 # Prototype Screenshots
@@ -75,3 +88,5 @@ Here are some screenshots from the prototype app:
 ![soother screenshot](/images/soother_screenshot_02.png)
 
 ![soother screenshot](/images/soother_screenshot_01.png)
+
+
