@@ -53,26 +53,24 @@ html{
 }
 
 body{
-	background-image: var(--bggradient);
-	background-size: 400%;
-	animation: bg-animation 25s ease;
-	animation-iteration-count: infinite;
+	background: #fff;
 }
 
 #header h1, #hearder a h1, #archive .post-list .post-item .meta, .post-list .post-item .meta, .content .h1, .content h1, .content.index a, #footer li a, .content .h1 a, #header #nav ul li, #header #nav ul li a{
-	font-family: cstbold, arial;
+	font-family: arial, sans-serif;
 	text-transform: uppercase;
-	background-image: var(--gradient);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	background-size: 400%;
-	animation: bg-animation 15s ease;
-	animation-iteration-count: infinite;
+	color: #72b956;
+}
+
+a, .content a{
+	text-transform: capitalize;
+	text-decoration: none;
+	border-bottom: 1px solid #72b956;
+	background-image: none;
 }
 
 h2 {
-	font-family: cstbold, arial;
+	font-family: arial, sans-serif;
 	font-size: 1.4rem;
   	color: #578d63;
   	text-transform: uppercase;
